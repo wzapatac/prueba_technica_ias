@@ -30,7 +30,6 @@ public class HandlerHotel {
         return requestUtil.buildRequestRegisterRoom(serverRequest)
                 .flatMap(roomUseCase::registerRoom).flatMap(responseUtil::buildResponseRegisterRoom);
     }
-
     public Mono<ServerResponse> findRooms(ServerRequest serverRequest) {
         return null;
     }
