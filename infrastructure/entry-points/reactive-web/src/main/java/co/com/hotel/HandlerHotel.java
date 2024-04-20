@@ -41,5 +41,4 @@ public class HandlerHotel {
     public Mono<ServerResponse> registerUser(ServerRequest serverRequest) {
         return null;
     }
-
 }
