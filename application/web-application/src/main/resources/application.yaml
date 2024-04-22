@@ -1,0 +1,30 @@
+server:
+  port: "8085"
+
+spring:
+  application:
+    name: "HotelIas"
+  webflux:
+    base-path: "/api/hotel"
+  profiles:
+    include: "local"
+
+logging:
+  root:
+    level: info
+
+
+hotel:
+  paths:
+    registerRoom: /room
+    findRooms: /rooms
+    deleteRoom: /room/{id}
+    registerUser: /user
+
+adapters:
+  dynamodb:
+    host: "http://localhost:8010"
+    tableUsersName: "hotel_users_ias"
+    tableRoomsName: "hotel_Rooms_ias"
+
+

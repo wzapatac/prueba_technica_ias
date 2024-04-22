@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.co.hotel'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':model-mapper')
+    implementation project(':model')
+    implementation project(':exception')
+    testImplementation group: 'io.projectreactor', name: 'reactor-test', version: '3.6.5'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '5.11.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '3.2.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '3.2.3'
+    implementation group: 'software.amazon.awssdk', name: 'dynamodb-enhanced', version: '2.25.22'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

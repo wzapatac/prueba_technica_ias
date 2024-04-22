@@ -1,0 +1,20 @@
+rootProject.name = 'HotelApplication'
+include ':web-application'
+include ':model'
+include ':usecase'
+include ':reactive-web'
+include ':dynamodb'
+include ':exception'
+include ':model-mapper'
+include ':sensor-trigger'
+
+project(':web-application').projectDir = file('./application/web-application')
+project(':model').projectDir = file('./domain/model')
+project(':usecase').projectDir = file('./domain/usecase')
+project(':reactive-web').projectDir = file('./infrastructure/entry-points/reactive-web')
+project(':dynamodb').projectDir = file('./infrastructure/driven-adapters/dynamodb')
+project(':exception').projectDir = file('./infrastructure/helpers/exception')
+project(':model-mapper').projectDir = file('./infrastructure/helpers/model-mapper')
+project(':sensor-trigger').projectDir = file('./infrastructure/entry-points/sensor-trigger')
+
+

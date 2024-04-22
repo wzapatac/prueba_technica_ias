@@ -1,0 +1,6 @@
+hotel:
+  paths:
+    registerRoom: /room
+    findRooms: /rooms
+    deleteRoom: /room/{id}
+    registerUser: /user
