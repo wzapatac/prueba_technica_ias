@@ -33,9 +33,9 @@ class SensorTriggerTest {
     }
 
     @Test
-    void couldApplyReservationFailed() {
-        when(roomUseCase.applyReservations()).thenReturn(Mono.empty());
-        Assertions.assertNotNull(sensorTrigger.applyReservation());
+    void couldDesApplyReservationSuccessFull() {
+        when(roomUseCase.desApplyReservations()).thenReturn(Mono.empty());
+        Assertions.assertNotNull(sensorTrigger.desApplyReservation());
     }
 
 }
